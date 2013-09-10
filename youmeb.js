@@ -81,10 +81,11 @@
           url: generateUrl(key, params),
           data: data
         })
-          .success(function (data, status) {
-            console.log(data);
+          .success(function () {
+            deferred.resolve.apply(deferred, arguments);
           })
-          .error(function (data, status) {
+          .error(function () {
+            deferred.reject.apply(deferred, arguments);
           });
 
         return deferred.promise;
