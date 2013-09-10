@@ -1,0 +1,11 @@
+{
+  "name": "youmeb-api-angularjs",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [
+    "youmeb-package"
+  ],
+  "author": "Po-Ying Chen <poying.me@gmail.com>",
+  "license": "MIT"
+}
