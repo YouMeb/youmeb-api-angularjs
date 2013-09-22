@@ -70,7 +70,7 @@
           if (!!~route.methods.indexOf('all')) {
             method = 'POST';
           } else {
-            method = route.methods.shift();
+            method = route.methods[0];
           }
         }
 
