@@ -22,7 +22,7 @@
       this.api = api = {};
 
       this.generateUrl = generateUrl = function (key, params) {
-        var route, path;
+        var route;
 
         if (!routes.hasOwnProperty(key)) {
           return;
@@ -30,7 +30,7 @@
 
         route = routes[key];
 
-        return route.path.replace(/(\/)?(\.)?:(\w+)(?:(\(.*?\)))?(\?)?(\*)?/g, function (_, slash, format, key, capture, optional, star) {
+        return route.path.replace(/(\/)?(\.)?:(\w+)(?:(\(.*?\)))?(\?)?(\*)?/g, function (_, slash, format, key, capture, optional) {
           slash = slash || '';
           return (optional ? '' : slash) + params[key];
         });
